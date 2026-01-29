@@ -1,4 +1,7 @@
 <!-- Formulaire pour ajouter une nouvelle tâche -->
+@extends('layout.app')
+@section('title', 'form')
+@section('content')
 <form action="/task" method="POST">
     @csrf
     <input type="text" name="title" placeholder="Nouvelle tâche" required>
@@ -24,4 +27,5 @@
         </form>
     </li>
 @endforeach
+@endsection    
 </ul>
